@@ -1,0 +1,14 @@
+.navbar {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+  list-style: none;
+}
+.logo {
+  width: 50%;
+  margin: 16px;
+}
+.nav {
+  display: flex;
+}

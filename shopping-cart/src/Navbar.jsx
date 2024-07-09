@@ -1,4 +1,5 @@
 import logo from './assets/nav-logo.jpg'
+import {Link} from 'react-router-dom';
 const Navbar = () => {
     return (
         <>
@@ -7,9 +8,9 @@ const Navbar = () => {
                     <img className="logo" src={logo}></img>
                 </div>
                 <ul className="navbar">
-                    <li>Home</li>
-                    <li>Shop</li>
-                    <li>Cart</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/shop">Shop</Link></li>
+                    <li><Link to="/cart">Cart</Link></li>
                 </ul>
             </div>
         </>

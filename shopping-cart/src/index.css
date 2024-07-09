@@ -3,7 +3,7 @@
   font-weight: bold;
 }
 .navbar {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   margin: 16px;
@@ -16,6 +16,7 @@
 }
 .nav {
   display: flex;
+  justify-content: space-between;
 }
 .home-logo {
   width: auto;

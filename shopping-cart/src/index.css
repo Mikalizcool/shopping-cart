@@ -3,11 +3,12 @@
   display: flex;
   justify-content: space-between;
   margin: 16px;
+  margin-top: 40px;
   list-style: none;
 }
 .logo {
-  width: 50%;
-  margin: 16px;
+  width: 30%;
+  margin-top: 10px;
 }
 .nav {
   display: flex;

@@ -1,9 +1,10 @@
+import logo from './assets/nav-logo.jpg'
 const Navbar = () => {
     return (
         <>
             <div className="nav">
                 <div className="logo">
-                    logo
+                    <img className="logo" src={logo}></img>
                 </div>
                 <ul className="navbar">
                     <li>Home</li>

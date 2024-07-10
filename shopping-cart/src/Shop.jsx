@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import Cart from './Cart'
+import ListItems from './ListItems'
 const Shop = () => {
     const [items, setItems] = useState([]);
     const [cart, setCart] = useState([]);
@@ -18,11 +19,11 @@ const Shop = () => {
         fetchItems();
     })
 
-    const handleClick = (item) => {
-        setCart(item);
-        setCartItems(cartItems+1);
-        console.log(cartItems);
-        console.log(cart);
+    const handleClick = (id) => { // for cart only
+        const updatedItems = items.map(item =>
+            item.id === id ? { ...item, selected: item.selected + 1 } : item
+        );
+        setItems(updatedItems);
     }
     return (
         <>
@@ -33,8 +34,8 @@ const Shop = () => {
                         <h1>{item.title}</h1>
                         <p className="description">{item.description}</p>
                         <p>${item.price}</p>
-                        <button onClick={()=>handleClick(item)}>Add to cart</button>
-                        <Cart cart = {cartItems}/>
+                        <button onClick={()=>handleClick(item.id)}>Add to cart</button>
+                        <p>{item.selected}</p>
                     </div>
                 ))}
             </div>

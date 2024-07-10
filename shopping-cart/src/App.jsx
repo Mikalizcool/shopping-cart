@@ -31,9 +31,13 @@ function App() {
     );
     setItems(updatedItems);
     setCartItems(cartItems+1);
-    console.log(cartItems);
+    console.log(cart);
+    handleCart();
   }
-
+  const handleCart = () => {
+    const updatedCart = items.filter(item => item.selected > 0);
+    setCart(updatedCart);
+  }
   return (
     <>
       <Router>
@@ -44,20 +48,33 @@ function App() {
           </Route>
           <Route path="/shop">
             <div className="shop">
-                  {items.map((item) => (
-                      <div className="item" key={item.id}>
-                          <img className="item-image" src={item.image}></img>
-                          <h1>{item.title}</h1>
-                          <p className="description">{item.description}</p>
-                          <p>${item.price}</p>
-                          <button onClick={()=>handleClick(item.id)}>Add to cart</button>
-                          <p>{item.selected}</p>
-                      </div>
-                  ))}
-              </div>
+              {items.map((item) => (
+                  <div className="item" key={item.id}>
+                      <img className="item-image" src={item.image}></img>
+                      <h1>{item.title}</h1>
+                      <p className="description">{item.description}</p>
+                      <p>${item.price}</p>
+                      <button onClick={()=>handleClick(item.id)}>Add to cart</button>
+                      <p>{item.selected}</p>
+                  </div>
+              ))}
+          </div>
           </Route>
           <Route path="/cart">
-            <Cart />
+          <div className="cart">
+            {cart.map((item) => (
+                <div className="cart-item" key={item.id}>
+                    <img className="cart-item-image" src={item.image}></img>
+                    <div className="cart-description">
+                      <h1>{item.title}</h1>
+                      <p>{item.description}</p>
+                    </div>
+                    <p>${item.price}</p>
+                    <button onClick={()=>handleClick(item.id)}>Add to cart</button>
+                    <p>{item.selected}</p>
+                </div>
+            ))}
+          </div>
           </Route>
         </Switch>
       </Router>

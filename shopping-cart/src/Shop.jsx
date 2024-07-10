@@ -17,7 +17,7 @@ const Shop = () => {
             }
         }
         fetchItems();
-    })
+    },[])
 
     const handleClick = (id) => { // for cart only
         const updatedItems = items.map(item =>

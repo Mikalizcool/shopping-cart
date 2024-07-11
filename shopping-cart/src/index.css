@@ -37,6 +37,7 @@
   margin-top: 50px;
   flex-wrap: wrap;
   margin: 40px;
+  justify-content: center;
 }
 .item {
   display: flex;
@@ -44,7 +45,11 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-  padding: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: grey;
+  margin: 5px;
 }
 .item-title {
   font-size: 1vw;

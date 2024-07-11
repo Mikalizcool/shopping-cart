@@ -17,6 +17,8 @@
 .nav {
   display: flex;
   justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .home-logo {
   width: auto;

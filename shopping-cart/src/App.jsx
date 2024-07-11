@@ -26,19 +26,21 @@ function App() {
     }
     fetchItems();
   },[]);
+  useEffect(() => {
+    handleCart();
+  }, [items])
   const handleClick = (id) => {
+    console.log
     const updatedItems = items.map(item =>
         item.id === id ? { ...item, selected: item.selected + 1 } : item
-    );
+    ); // item selected
     setItems(updatedItems);
-    setCartItems(cartItems+1);
-    console.log(cart);
-    handleCart();
+    setCartItems(cartItems + 1);
   }
   const handleCart = () => {
     const updatedCart = items.filter(item => item.selected > 0);
-    updatedCart.map(item =>{setTotal(total+item.price)});
-    setCart(updatedCart);
+    updatedCart.map(item =>{setTotal(total+item.price)}); // cart total
+    setCart(updatedCart); // selected item added to cart
   }
   return (
     <>

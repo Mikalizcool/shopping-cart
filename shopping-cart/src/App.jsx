@@ -60,7 +60,7 @@ function App() {
                         <p className="item-description">{item.description}</p>
                     <div className="item-cart-details">
                         <p>${item.price}</p>
-                        <button onClick={()=>handleClick(item.id)}>Add to cart</button>
+                        <button className="item-button"onClick={()=>handleClick(item.id)}>Add to cart</button>
                         <p>{item.selected}</p>
                     </div>
                   </div>

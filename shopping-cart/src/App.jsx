@@ -30,7 +30,6 @@ function App() {
     handleCart();
   }, [items])
   const handleClick = (id) => {
-    console.log
     const updatedItems = items.map(item =>
         item.id === id ? { ...item, selected: item.selected + 1 } : item
     ); // item selected
@@ -39,8 +38,10 @@ function App() {
   }
   const handleCart = () => {
     const updatedCart = items.filter(item => item.selected > 0);
-    updatedCart.map(item =>{setTotal(total+item.price)}); // cart total
-    setCart(updatedCart); // selected item added to cart
+    setCart(updatedCart);
+    let newTotal = 0;
+    updatedCart.map(item => {newTotal += item.price * item.selected}); // cart total
+    setTotal(newTotal);
   }
   return (
     <>

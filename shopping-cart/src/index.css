@@ -29,21 +29,29 @@
   align-items: center;
 }
 .item-image {
-  width: 25%;
+  width: auto;
+  max-height: 100px;
 }
 .shop {
   display: flex;
-  flex-direction: column;
   margin-top: 50px;
+  flex-wrap: wrap;
+  margin: 40px;
 }
 .item {
   display: flex;
+  width: 20%;
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
+  padding: 40px;
+}
+.item-title {
+  font-size: 1vw;
+  text-align: center;
 }
 .description {
-  width: 50%;
+  width: 80%;
 }
 .cart {
   margin: 40px;

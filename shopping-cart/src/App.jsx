@@ -56,7 +56,7 @@ function App() {
               {items.map((item) => (
                   <div className="item" key={item.id}>
                       <img className="item-image" src={item.image}></img>
-                      <h1>{item.title}</h1>
+                      <h1 className="item-title">{item.title}</h1>
                       <p className="description">{item.description}</p>
                       <p>${item.price}</p>
                       <button onClick={()=>handleClick(item.id)}>Add to cart</button>

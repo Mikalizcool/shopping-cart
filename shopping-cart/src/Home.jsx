@@ -4,6 +4,7 @@ const Home = () => {
         <>
             <div className="home">
                 <img className="home-logo" src={logo}></img>
+                <p>We take pride in our random items</p>
             </div>
         </>
     );

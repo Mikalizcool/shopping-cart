@@ -12,6 +12,7 @@ function App() {
   const [cartItems, setCartItems] = useState(0);
   const [items, setItems] = useState([]);
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
   useEffect(() => {
     const fetchItems = async () => {
         try {
@@ -36,6 +37,7 @@ function App() {
   }
   const handleCart = () => {
     const updatedCart = items.filter(item => item.selected > 0);
+    updatedCart.map(item =>{setTotal(total+item.price)});
     setCart(updatedCart);
   }
   return (
@@ -69,11 +71,12 @@ function App() {
                       <h1>{item.title}</h1>
                       <p>{item.description}</p>
                     </div>
-                    <p>${item.price}</p>
-                    <button onClick={()=>handleClick(item.id)}>Add to cart</button>
-                    <p>{item.selected}</p>
+                    <p className="cart-price">${item.price}</p>
+                    <p className="cart-selected">{item.selected}</p>
+                    <p className="cart-item-total">${item.price * item.selected}</p>
                 </div>
             ))}
+            <p>{total}</p>
           </div>
           </Route>
         </Switch>

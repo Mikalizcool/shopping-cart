@@ -59,3 +59,12 @@
 .cart-description {
   width: 50%;
 }
+.cart-price {
+  margin-left: 40px;
+}
+.cart-selected {
+  margin-left: 40px;
+}
+.cart-item-total {
+  margin-left: 40px;
+}

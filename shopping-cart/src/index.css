@@ -55,6 +55,8 @@
 }
 .cart {
   margin: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .cart-item {
   display: flex;
@@ -69,6 +71,7 @@
 }
 .cart-price {
   margin-left: 40px;
+  display: flex;
 }
 .cart-selected {
   margin-left: 40px;

@@ -74,12 +74,12 @@ function App() {
                       <h1>{item.title}</h1>
                       <p>{item.description}</p>
                     </div>
-                    <p className="cart-price">${item.price}</p>
-                    <p className="cart-selected">{item.selected}</p>
-                    <p className="cart-item-total">${item.price * item.selected}</p>
+                    <p className="cart-price">Item cost: ${item.price}</p>
+                    <p className="cart-selected">Amount: {item.selected}</p>
+                    <p className="cart-item-total">Total cost: ${item.price * item.selected}</p>
                 </div>
             ))}
-            {total > 0 ? <p>{total}</p> : <p>Cart is empty!</p>}
+            {total > 0 ? <p>Cart Total: ${total}</p> : <p>Cart is empty!</p>}
           </div>
           </Route>
         </Switch>

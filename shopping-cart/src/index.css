@@ -117,11 +117,20 @@
 .mobile-menu {
   display: none;
 }
-.mobile-button {
+#mobile-button {
   background-color: white;
   border-color: white;
   display: none;
   height: 50px;
+  cursor: pointer;
+}
+#mobile-navbar {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+.mobile-nav {
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -131,7 +140,12 @@
   .mobile-menu {
     display: inline;
   }
-  .mobile-button {
+  #mobile-button {
     display: inline;
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

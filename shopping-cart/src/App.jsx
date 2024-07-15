@@ -57,7 +57,6 @@ function App() {
                   <div className="item" key={item.id}>
                         <img className="item-image" src={item.image}></img>
                         <h1 className="item-title">{item.title}</h1>
-                        <p className="item-description">{item.description}</p>
                     <div className="item-cart-details">
                         <p>${item.price}</p>
                         <button className="item-button"onClick={()=>handleClick(item.id)}>Add to cart</button>

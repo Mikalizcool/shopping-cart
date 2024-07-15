@@ -117,12 +117,21 @@
 .mobile-menu {
   display: none;
 }
+.mobile-button {
+  background-color: white;
+  border-color: white;
+  display: none;
+  height: 50px;
+}
 
 @media screen and (max-width: 800px) {
   .navbar {
     display: none;
   }
   .mobile-menu {
+    display: inline;
+  }
+  .mobile-button {
     display: inline;
   }
 }

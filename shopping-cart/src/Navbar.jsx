@@ -13,7 +13,7 @@ const Navbar = ({total}) => {
                     <li><Link to="/shop">Shop</Link></li>
                     <li><Link to="/cart">Cart: {total}</Link></li>
                 </ul>
-                <img className="mobile-menu" src={menu}></img>
+                <button className="mobile-button"><img className="mobile-menu" src={menu}></img></button>
             </div>
         </>
     );

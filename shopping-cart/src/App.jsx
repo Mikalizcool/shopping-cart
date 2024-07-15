@@ -81,7 +81,7 @@ function App() {
                     <p className="cart-item-total">Total cost: ${item.price * item.selected}</p>
                 </div>
             ))}
-            {total > 0 ? <p>Cart Total: ${Math.round(total)}</p> : <p>Cart is empty!</p>}
+            {total > 0 ? <p className="cart-total">Cart Total: ${Math.round(total)}</p> : <p>Cart is empty!</p>}
           </div>
           </Route>
         </Switch>

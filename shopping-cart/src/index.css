@@ -111,3 +111,6 @@
 .cart-item-total {
   margin-left: 40px;
 }
+.cart-total {
+  text-align: right;
+}

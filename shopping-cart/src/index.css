@@ -114,3 +114,15 @@
 .cart-total {
   text-align: right;
 }
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    display: none;
+  }
+  .mobile-menu {
+    display: inline;
+  }
+}

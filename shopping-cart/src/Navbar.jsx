@@ -18,16 +18,16 @@ const Navbar = ({total}) => {
                     <Link to="/"><img className="logo" src={logo}></img></Link>
                 </div>
                 <ul className="navbar">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/shop">Shop</Link></li>
-                    <li><Link to="/cart">Cart: {total}</Link></li>
+                    <li><Link className="link" to="/">Home</Link></li>
+                    <li><Link className="link" to="/shop">Shop</Link></li>
+                    <li><Link className="link" to="/cart">Cart: {total}</Link></li>
                 </ul>
                 <div className="mobile-nav">
                     <button onClick = {() => handleClick()}id="mobile-button"><img className="mobile-menu" src={menu}></img></button>
                     <ul id="mobile-navbar">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/shop">Shop</Link></li>
-                        <li><Link to="/cart">Cart: {total}</Link></li>
+                        <li><Link className="link" to="/">Home</Link></li>
+                        <li><Link className="link" to="/shop">Shop</Link></li>
+                        <li><Link className="link" to="/cart">Cart: {total}</Link></li>
                     </ul>
                 </div>
             </div>

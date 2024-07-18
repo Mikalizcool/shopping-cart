@@ -10,6 +10,9 @@
   margin-top: 40px;
   list-style: none;
 }
+.link {
+  text-decoration: none;
+}
 .logo {
   width: 30%;
   margin-top: 10px;
